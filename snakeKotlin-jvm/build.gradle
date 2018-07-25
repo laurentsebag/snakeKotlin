@@ -2,8 +2,6 @@ plugins {
     id 'kotlin-platform-jvm' version '1.2.51'
 }
 
-apply plugin: 'kotlin-platform-jvm'
-
 repositories {
     mavenCentral()
 }
