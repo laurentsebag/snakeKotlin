@@ -1,4 +1,4 @@
-package com.laurentsebag.snake
+package com.snake.game
 
 class Snake {
     private val _body = mutableListOf<Point>()

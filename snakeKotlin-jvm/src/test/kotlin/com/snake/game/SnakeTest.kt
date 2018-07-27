@@ -1,4 +1,4 @@
-package com.laurentsebag.snake
+package com.snake.game
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
