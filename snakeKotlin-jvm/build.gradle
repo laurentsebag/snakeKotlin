@@ -1,3 +1,7 @@
+buildscript {
+    repositories.mavenLocal()
+}
+
 plugins {
     id 'kotlin-platform-jvm' version '1.2.51'
 }
@@ -10,6 +14,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     expectedBy project(":snakeKotlin-common")
 
+    testCompile "com.google.truth:truth:0.42"
     testCompile "junit:junit:4.12"
     testCompile "org.jetbrains.kotlin:kotlin-test"
     testCompile "org.jetbrains.kotlin:kotlin-test-junit"
