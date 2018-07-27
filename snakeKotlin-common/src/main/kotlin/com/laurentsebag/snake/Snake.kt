@@ -1,13 +1,16 @@
 package com.laurentsebag.snake
 
-class Snake(body: ArrayList<Point>) {
-
-    private val body: ArrayList<Point> = body
+class Snake {
+    private val _body = mutableListOf<Point>()
     private var growth = 0
 
+    val body: List<Point>
+        get() = _body
+
+
     init {
-        body.add(Point(0, 0))
-        body.add(Point(1, 0))
+        _body.add(Point(0, 0))
+        _body.add(Point(1, 0))
     }
 
     fun moveUp() {
@@ -34,16 +37,16 @@ class Snake(body: ArrayList<Point>) {
         if (this.growth > 0) {
             this.growth--
         } else {
-            this.body.removeAt(0)
+            this._body.removeAt(0)
         }
     }
 
     private fun moveHeadBy(x: Int, y: Int) {
-        val lastHead = this.body.last()
-        body.add(Point(lastHead.x + x, lastHead.y + y))
+        val lastHead = this._body.last()
+        _body.add(Point(lastHead.x + x, lastHead.y + y))
     }
 
     fun grow() {
-        growth++;
+        growth++
     }
 }
