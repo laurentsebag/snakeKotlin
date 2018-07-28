@@ -104,4 +104,38 @@ internal class SnakeTest {
                 Point(1, 1),
                 Point(0, 1)))
     }
+
+    @Test
+    fun grow_shouldDoNothing_whenNotMoved() {
+        val body = snake.body.toList()
+
+        snake.grow()
+
+        assertThat(snake.body).isEqualTo(body)
+    }
+
+
+    @Test
+    fun grow_shouldGrowOnce_whenMoving() {
+        val bodySize = snake.body.size
+
+        snake.grow()
+        snake.moveRight()
+
+        assertThat(snake.body.size).isEqualTo(bodySize + 1)
+    }
+
+
+    @Test
+    fun grow_shouldGrowMoreThanOnce_whenMoving() {
+        val bodySize = snake.body.size
+
+        snake.grow()
+        snake.grow()
+        snake.moveRight()
+        snake.moveRight()
+        snake.moveRight()
+
+        assertThat(snake.body.size).isEqualTo(bodySize + 2)
+    }
 }
