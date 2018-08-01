@@ -1,2 +1,2 @@
 # snakeKotlin
-Kotlin implementation of the snake game for Web and Android
+**Work in progress:** Kotlin implementation of the snake game for Web and Android
