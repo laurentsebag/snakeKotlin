@@ -1,16 +1,16 @@
 package com.snake.game
 
 class Snake {
-    private val _body = mutableListOf<Point>()
+    private val _body = mutableListOf<Cell>()
     private var growth = 0
 
-    val body: List<Point>
+    val body: List<Cell>
         get() = _body
 
 
     init {
-        _body.add(Point(0, 0))
-        _body.add(Point(1, 0))
+        _body.add(Cell(0, 0))
+        _body.add(Cell(1, 0))
     }
 
     fun moveUp() {
@@ -43,7 +43,7 @@ class Snake {
 
     private fun moveHeadBy(x: Int, y: Int) {
         val lastHead = this._body.last()
-        _body.add(Point(lastHead.x + x, lastHead.y + y))
+        _body.add(Cell(lastHead.x + x, lastHead.y + y))
     }
 
     fun grow() {

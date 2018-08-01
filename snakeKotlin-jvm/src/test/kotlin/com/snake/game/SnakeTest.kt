@@ -16,8 +16,8 @@ internal class SnakeTest {
     @Test
     fun init_shouldAddBody() {
         assertThat(snake.body).isEqualTo(listOf(
-                Point(0, 0),
-                Point(1, 0)))
+                Cell(0, 0),
+                Cell(1, 0)))
     }
 
     @Test
@@ -25,8 +25,8 @@ internal class SnakeTest {
         snake.moveUp()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(1, 0),
-                Point(1, -1)))
+                Cell(1, 0),
+                Cell(1, -1)))
     }
 
     @Test
@@ -35,9 +35,9 @@ internal class SnakeTest {
         snake.moveUp()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(0, 0),
-                Point(1, 0),
-                Point(1, -1)))
+                Cell(0, 0),
+                Cell(1, 0),
+                Cell(1, -1)))
     }
 
     @Test
@@ -45,8 +45,8 @@ internal class SnakeTest {
         snake.moveDown()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(1, 0),
-                Point(1, 1)))
+                Cell(1, 0),
+                Cell(1, 1)))
     }
 
 
@@ -56,9 +56,9 @@ internal class SnakeTest {
         snake.moveDown()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(0, 0),
-                Point(1, 0),
-                Point(1, 1)))
+                Cell(0, 0),
+                Cell(1, 0),
+                Cell(1, 1)))
     }
 
     @Test
@@ -66,8 +66,8 @@ internal class SnakeTest {
         snake.moveRight()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(1, 0),
-                Point(2, 0)))
+                Cell(1, 0),
+                Cell(2, 0)))
     }
 
 
@@ -77,9 +77,9 @@ internal class SnakeTest {
         snake.moveRight()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(0, 0),
-                Point(1, 0),
-                Point(2, 0)))
+                Cell(0, 0),
+                Cell(1, 0),
+                Cell(2, 0)))
     }
 
     @Test
@@ -88,8 +88,8 @@ internal class SnakeTest {
         snake.moveLeft()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(1, 1),
-                Point(0, 1)))
+                Cell(1, 1),
+                Cell(0, 1)))
     }
 
 
@@ -100,9 +100,9 @@ internal class SnakeTest {
         snake.moveLeft()
 
         assertThat(snake.body).isEqualTo(listOf(
-                Point(1, 0),
-                Point(1, 1),
-                Point(0, 1)))
+                Cell(1, 0),
+                Cell(1, 1),
+                Cell(0, 1)))
     }
 
     @Test
