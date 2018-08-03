@@ -18,4 +18,4 @@ snakeKotlin-common/build/
 snakeKotlin-jvm/build/
 snakeKotlin-js/build/
 .gradle
-
+node_modules
