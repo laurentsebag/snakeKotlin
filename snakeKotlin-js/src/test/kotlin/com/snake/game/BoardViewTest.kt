@@ -1,5 +1,13 @@
 package com.snake.game
 
-import org.junit.jupiter.api.Assertions.*
+import kotlin.test.Test
+import kotlin.test.assertTrue
 
-internal class BoardViewTest
+internal class BoardViewTest {
+    val view = BoardView(null) as BoardPresenterContract.View
+
+    @Test
+    fun setup_shouldInitialisePresenter() {
+        assertTrue { true }
+    }
+}

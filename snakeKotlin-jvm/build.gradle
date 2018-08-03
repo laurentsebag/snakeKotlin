@@ -11,8 +11,9 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     expectedBy project(":snakeKotlin-common")
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 
     testCompile "com.google.truth:truth:0.42"
     testCompile "junit:junit:4.12"
