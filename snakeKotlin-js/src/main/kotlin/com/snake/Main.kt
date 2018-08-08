@@ -1,5 +1,7 @@
 import com.snake.game.BoardPresenter
-import com.snake.game.BoardView
+import com.snake.game.JsBoardView
+import com.snake.game.JsBoardViewConfig
+import com.snake.game.SnakeModel
 import org.w3c.dom.CanvasRenderingContext2D
 import org.w3c.dom.HTMLCanvasElement
 import kotlin.browser.document
@@ -9,8 +11,8 @@ fun main(args: Array<String>) {
     val canvas = document.getElementById("gameBoard") as HTMLCanvasElement
     val context = canvas.getContext("2d") as CanvasRenderingContext2D
 
-    val boardView = BoardView(context)
-    val boardPresenter = BoardPresenter(boardView)
+    val boardView = JsBoardView(JsBoardViewConfig(context))
+    val boardPresenter = BoardPresenter(boardView, SnakeModel())
     boardView.setup(boardPresenter) // find out what is different if using as BoardPresenterContract.Presenter
 }
 
@@ -21,7 +23,7 @@ fun main(args: Array<String>) {
 //
 
 //
-//    val snake = Snake()
+//    val snake = SnakeModel()
 //
 //    fun draw() {
 //        context.clearRect(0.0, 0.0, canvas.width.toDouble(), canvas.height.toDouble())

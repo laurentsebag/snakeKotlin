@@ -2,12 +2,13 @@ package com.snake.game
 
 interface BoardPresenterContract {
     interface Presenter {
+        fun onSetup()
+        fun onPreDraw()
         fun onKeyPress(key: String)
-        fun onViewPreDraw()
     }
 
     interface View {
         fun setup(presenter: Presenter)
-        fun setViewFrameRate(frameRate: Int)
+        fun startWithFrameRate(frameRate: Int)
     }
 }

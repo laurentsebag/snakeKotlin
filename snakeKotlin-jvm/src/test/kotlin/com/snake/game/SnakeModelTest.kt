@@ -4,13 +4,13 @@ import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
 
-internal class SnakeTest {
+internal class SnakeModelTest {
 
     private lateinit var snake: Snake
 
     @Before
     fun setup() {
-        snake = Snake()
+        snake = SnakeModel()
     }
 
     @Test
